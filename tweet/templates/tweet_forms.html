@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}
+    personal movie blog
+{% endblock title %}
+{% block content %}
+    <h1 class="text-center font-weight-thin mt-2 p-2">
+        Welcome To my Movie Blogs
+    </h1>
+
+    <h2>{%if forms.instance.pk %}
+        Edit Tweet 
+        {% else %}
+        Create tweet
+        {% endif %}
+        <form method="post" enctype="multipart/form-data" class="form border-primary ">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-warning" type="submit">Submit</button>
+        </form>
+        <a href="{% url 'tweet_list' %}">Back to Tweet List</a>
+    </h2>    
+
+{% endblock content %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}
+    personal movie blog
+{% endblock title %}
+{% block content %}
+    <h1 class="text-center font-weight-thin mt-2 p-2">Welcome To my Movie Blogs</h1>
+
+    <a class="btn btn-primary mb-4 " href="{% url 'tweet_create' %}">
+        Create a Tweet</a>
+        <div class="container row gap-3">
+               {% for tweet in tweets  %}
+               <div class="card grid grid-cols-3 grid gap-4 h-20 w-20" style="width: 18rem;">
+                <img src="{{tweet.photo.url}}" class="card-img-top w-20 h-20 mt-3 p-0 hover:opacity-75" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">{{tweet.user.username}}</h5>
+                  <p class="card-text">{{tweet.text}}</p>
+                  {% if tweet.user == user %}
+                  <a href="{% url 'tweet_edit' tweet.id %}" class="btn btn-primary">Edit</a>
+                  <a href="{% url 'tweet_delete' tweet.id %}" class="btn btn-danger">Delete</a>
+                  {% endif %}
+                </div>
+              </div>
+               {% endfor %}
+        </div>
+{% endblock content %}
