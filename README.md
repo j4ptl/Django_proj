@@ -41,7 +41,7 @@ Apply migrations to set up the database:
 
 bash
 Copy code
-python manage.py migrate
+"**python manage.py runserver**" migrate
 Create a superuser (admin account):
 
 bash
