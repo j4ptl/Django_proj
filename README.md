@@ -2,7 +2,8 @@
 Tweet Blog 🐦
 A Django-powered web application to create, manage, and share tweets securely. This project includes full user authentication, security measures, and an easy-to-follow setup for running and deploying.
 
-Features
+Features![Screenshot 2025-04-20 113214](https://github.com/user-attachments/assets/6fa6fde7-6095-47ad-9434-dc817b7532b3)
+
 User Registration & Authentication (Login/Signup).
 Create, Read, Update, and Delete (CRUD) functionality for tweets.
 Secure password storage and user data protection.
@@ -52,7 +53,7 @@ Run the development server:
 bash
 Copy code
 python manage.py runserver
-Visit the application at http://127.0.0.1:8000.
+Visit the application at (http://127.0.0.1:8000/tweet/#).
 
 Deployment
 Install Gunicorn (or any WSGI server) and configure it:
@@ -73,7 +74,7 @@ Run locally:
 bash
 Copy code
 python manage.py runserver
-Access the application at http://127.0.0.1:8000.
+Access the application at (http://127.0.0.1:8000/tweet/#).
 
 Admin Panel:
 Go to /admin to manage the app using the superuser credentials.
